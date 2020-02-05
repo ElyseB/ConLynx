@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" type="text/css" href="ConLynx.css">
+<title>ConLynx</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Welcome to ConLynx</h1>
+	<h2><center>This site keeps track of conference papers and reviews for both
+		writers and reviewers.</center></h2>
+
+	<form th:action="@{/processLogIn}" th:object="${participator}"
+		method="post">
+		<table align ="center"> 
+			<tr>
+				<td>Email :</td>
+				<td><input type="text" th:field="*{email}" /></td>
+				</center>
+			</tr>
+			<tr>
+				<td>Password :</td>
+				<td><input type="text" th:field="*{password}" /></td>
+			</tr>
+			<tr>
+				<td><p><input type="submit" value="Submit" /></p></td>
+				<td><p><input type="reset" value="Reset" /></p></td>
+			</tr>
+		</table>
+</body>
+</html>

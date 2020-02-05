@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" type="text/css" href="ConLynx.css">
+<title>ConLynx</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Welcome to ConLynx!</h1>
+	<h2>Your One Stop Shop For All Your Conference Paper Needs</h2>
+	
+	<p><center>This site keeps track of conference papers and reviews for both
+		writers and reviewers.</center></p>
+	
+	
+	<p><center>Please click the link below to log in or register as a new user.</center></p>
+	<center>
+	<a th:href="@{'/logIn'}"><button>Log in</button></a>
+	<a th:href="@{'/register'}"><button>Register New User</button></a>
+	</center>
+</body>
+</html>

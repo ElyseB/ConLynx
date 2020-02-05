@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"> 
+<head>
+<link rel="stylesheet" type="text/css" href="ConLynx.css">
+<meta charset="ISO-8859-1">
+<title>ConLynx</title>
+</head>
+<body style="background-color:lightblue">
+	<center><h1>New Reviews</h1>
+	<h2>Please enter your review</h2>
+	</center>
+	<form th:action="@{/processNewReview}" th:object="${reviews}"
+		method="post">
+		<table align="center">
+			<tr>
+				<td>Reviewer Email :</td>
+				<td><input type="text" th:field="*{revemail}" /></td>
+			</tr>
+			<tr>
+				<td>Paper ID :</td>
+				<td><input type="text" th:field="*{paperid}" /></td>
+			</tr>
+			<tr>
+				<td>Technical Merit :</td>
+				<td><input type="text" th:field="*{techmerit}" /></td>
+			</tr>
+			<tr>
+				<td>Readability :</td>
+				<td><input type="text" th:field="*{readability}" /></td>
+			</tr>
+			<tr>
+				<td>Originality :</td>
+				<td><input type="text" th:field="*{originality}" /></td>
+			</tr>
+			<tr>
+				<td>Relavance :</td>
+				<td><input type="text" th:field="*{relavance}" /></td>
+			</tr>
+			<tr>
+				<td>Overall Recommendation :</td>
+				<td><input type="text" th:field="*{overallrecomm}" /></td>
+			</tr>
+			<tr>
+				<td>Comment for Committee :</td>
+				<td><input type="text" th:field="*{commentforcommittee}" /></td>
+			</tr>
+			<tr>
+				<td>Comment for Author :</td>
+				<td><input type="text" th:field="*{commentforauthor}" /></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="submit" /></td>
+				<td><input type="reset" value="reset" /></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
+
+
+</body>
+</html>

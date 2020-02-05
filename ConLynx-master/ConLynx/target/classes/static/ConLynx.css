@@ -1,0 +1,42 @@
+@charset "ISO-8859-1";
+body {
+  background-color: lightblue;
+}
+
+h1 {
+  color: black;
+  text-align: center;
+  margin-left: 20px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size:8vw /*vw changes the size of the font relative to the screen size*/
+}
+
+h2 {
+	color: black;
+	text-align: center;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+p {
+	color: black;
+	text-align: left;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+table.prettytable {
+  margin: 1em 1em 1em 2em;
+  background: lightblue;
+  border-collapse: collapse;
+}
+table.prettytable th, table.prettytable td {
+  border: 1px silver solid;
+  padding: 0.2em;
+}
+table.prettytable th {
+  background: gainsboro;
+  text-align: left;
+}
+table.prettytable caption {
+  margin-left: inherit;
+  margin-right: inherit;
+} 

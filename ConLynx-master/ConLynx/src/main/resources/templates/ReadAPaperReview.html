@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"> 
+<head>
+<link rel="stylesheet" type="text/css" href="ConLynx.css">
+<meta charset="ISO-8859-1">
+<title>Read A Paper Review</title>
+</head>
+<body style="background-color:lightblue">
+	
+	<center>
+	<h1><center>Welcome to ConLynx</center></h1>
+	<h1>Choose the paper you would like to see reviewed.</h1>
+	</center>
+<!-- 	<table class="prettytable">
+
+		<td>Paper ID:</td>
+		<td><select th:field="*{reviews}">
+				<option value="">Paper ID</option>
+				<option th:each="reviews: ${reviewsList}"
+					th:value="${reviews.paperid}" th:text="${reviews.paperid}" />
+		</select></td> -->
+
+		<center>
+		<form th:action="@{/processReadAPaperReview}" th:object="${reviews}"
+			method="post">
+			<table>
+				<tr>
+					<td>Paper ID :</td>
+					<td><input type="text" th:field="*{paperid}" /></td>
+				</tr>
+				<td><input type="submit" value="submit" /></td>
+				<td><input type="reset" value="reset" /></td>
+				</tr>
+				</center>
+			</table>
+		</form>
+</body>
+</html>

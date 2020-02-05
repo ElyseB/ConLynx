@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ConLynx.css">
+<meta charset="ISO-8859-1">
+<title>Your Reviews</title>
+</head>
+<body style="background-color:lightblue">
+	<center><h1>Your Reviews</h1>
+	<h2>Here is a list of your completed reviews</h2>
+
+	<p></p>
+	<table class="prettytable">
+
+		<tr>
+			<th>Reviewer Email</th>
+			<th>PaperID</th>
+			<th>Tech Merit</th>
+			<th>Readability</th>
+			<th>Originality</th>
+			<th>Relavance</th>
+			<th>Overall Recommendation</th>
+			<th>Comment For Committee</th>
+			<th>Comment For Author</th>
+			<th></th>
+		</tr>
+
+		<tr th:each="reviews: ${myReviewsList}">
+			<td th:text="${reviews.revemail}" />
+			<td th:text="${reviews.paperid}" />
+			<td th:text="${reviews.techmerit}" />
+			<td th:text="${reviews.readability}" />
+			<td th:text="${reviews.originality}" />
+			<td th:text="${reviews.relavance}" />
+			<td th:text="${reviews.overallrecomm}" />
+			<td th:text="${reviews.commentforcommittee}" />
+			<td th:text="${reviews.commentforauthor}" />
+			</td>
+		</tr>
+
+	</table>
+</body>
+</html>
